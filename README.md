@@ -10,7 +10,26 @@
 
 [下载 BabelDOC-Cloud.zip](https://github.com/Clair-ChenShoujie/Babeldoc4GPT/releases/download/v0.2.0/BabelDOC-Cloud.zip)
 
-## 适合用来做什么
+## 🖼️ 翻译效果示例
+
+下面是 *Attention Is All You Need* 第 4 页的实际翻译结果，包含 3.2.1 节、缩放点积注意力公式和多头注意力示意图。左侧为英文原文，右侧为中文译文。
+
+![Attention Is All You Need 第4页中英对照](examples/attention/attention-page4-bilingual.png)
+
+[英文原页 PDF](examples/attention/attention-page4-original.pdf) · [中文 PDF](examples/attention/attention-page4-zh.pdf) · [中英对照 PDF](examples/attention/attention-page4-bilingual.pdf)
+
+<details>
+<summary>查看中文单页预览</summary>
+
+![中文单页预览](examples/attention/attention-page4-zh.png)
+
+</details>
+
+示例由本工具实际导出，预览直接渲染自 PDF，未做图像修饰。图内英文标签保留，个别行内公式附近仍有细线残留，可下载 PDF 放大查看。
+
+来源：Vaswani et al., [Attention Is All You Need, arXiv:1706.03762v7](https://arxiv.org/abs/1706.03762)，第 4 页。中文为非官方译文，用于展示翻译效果。
+
+## 📖 适合用来做什么
 
 - 阅读外文论文、技术文档和报告，希望在译文中继续查看公式、表格和原有页面结构。
 - 同时获得目标语言 PDF 与原文／译文对照 PDF，方便阅读和核对。
@@ -26,7 +45,7 @@
 
 ChatGPT 服务费用与使用额度仍按账号适用条件执行。可处理的文档规模和耗时，取决于账号能力及沙箱的网络、内存和执行时间。
 
-## 下载与使用
+## 📦 下载与使用
 
 ### 方式一：导入为插件
 
@@ -53,7 +72,9 @@ skills/translate-pdf-cloud/SKILL.md，并按该工作流实际处理附件 PDF�
 
 这种方式仅在当前任务中执行工作流，**不会将插件安装到账号**；同样需要可执行代码、可准备依赖的云沙箱。
 
-## 第一次使用：先试译 5 页
+## 📝 第一次使用：先试译 5 页
+
+**模型选择提示：** 普通文本可以先用支持该工作流的轻量模型试译，不必一开始就选最强的推理模型。专业术语和公式较多的页面建议重点抽查；如果出现漏译或反复的格式校验失败，再考虑换用能力更强的模型。
 
 已导入插件的用户，上传 PDF 后可以直接发送：
 
@@ -89,7 +110,7 @@ skills/translate-pdf-cloud/SKILL.md，并按该工作流实际处理附件 PDF�
 
 请及时下载结果和进度包，沙箱文件不宜作为长期存储。
 
-## 长文、暂停与恢复
+## 💾 长文、暂停与恢复
 
 工作流会分批提交译文，并记录已经接受的结果。如果暂时不继续，可以说：
 
